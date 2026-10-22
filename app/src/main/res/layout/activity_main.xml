@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/textViewTitreImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_imc"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Champ Poids -->
+    <EditText
+        android:id="@+id/editTextPoids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_poids"
+        android:inputType="numberDecimal"
+        android:autofillHints="weight"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Champ Taille -->
+    <EditText
+        android:id="@+id/editTextTaille"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_taille"
+        android:inputType="numberDecimal"
+        android:autofillHints="height"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Boutons -->
+    <Button
+        android:id="@+id/buttonCalculer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculer"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonEffacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/effacer"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonPartager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/partager"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Résultats -->
+    <TextView
+        android:id="@+id/textViewImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewCategorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Jauge colorée -->
+    <ProgressBar
+        android:id="@+id/progressBarImc"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:max="50"
+        android:progress="0"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Historique -->
+    <ListView
+        android:id="@+id/listViewHistorique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
